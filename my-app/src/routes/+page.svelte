@@ -1,7 +1,5 @@
 <script language="ts">
-	import ProductCard from '../lib/productCard.svelte';
-	import autoPreprocess from 'svelte-preprocess';
- 	import typescript from '@rollup/plugin-typescript';
+	import ProductCard from '../lib/productCard.svelte'
 
 	const products : Product[] = [
 		{
