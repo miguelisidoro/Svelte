@@ -1,5 +1,8 @@
 module.exports = {
 	root: true,
+	"rules": {
+		"@typescript-eslint/no-var-requires": "warning"
+	},
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',

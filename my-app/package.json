@@ -36,6 +36,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@rollup/plugin-typescript": "^11.1.1"
+		"@pyoner/svelte-ts-preprocess": "^1.2.0",
+		"@rollup/plugin-typescript": "^11.1.1",
+		"svelte-ts-preprocess": "^1.1.3"
 	}
 }
