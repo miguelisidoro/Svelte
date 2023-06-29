@@ -10,6 +10,7 @@
         cart = newCartValue;
         cartItemIndex = cart.findIndex((item) => { return item.id === product.id; });
         cartProduct = cart[cartItemIndex];
+        console.log(cart);
     })
 
     console.log(product);
@@ -17,9 +18,11 @@
 
 <div class="card">
     <header class="card-header"><h2>{product.name}</h2></header>
-    <div class="card-body px-4">
-        Quantity: <strong>4</strong>
-    </div>
+    {#if cartProduct !== undefined}
+        <div class="card-body px-4">
+            Quantity: <strong>{cartProduct.quantity}</strong>
+        </div>
+    {/if}
     <div class="card-body px-4">
         Price: ${product.price}
     </div>
