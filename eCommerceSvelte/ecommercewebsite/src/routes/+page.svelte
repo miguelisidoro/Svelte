@@ -3,21 +3,30 @@
 
 	const products: Product[] = [
 		{
-			id: "1",
+			id: "price_1NOOEcC892MWjQYTq8NPgJn3",
 			name: "Coffee",
 			price: 5
 		},
 		{
-			id: "2",
-			name: "Sunglasses",
-			price: 15
+			id: "price_1NOOFGC892MWjQYTrpYXD0za",
+			name: "Sun Glasses",
+			price: 10
 		},
 		{
-			id: "3",
+			id: "price_1NOOFgC892MWjQYTS3k7uSOJ",
 			name: "Water Bottle",
-			price: 3
+			price: 15
 		}
 	]
+
+	// async function checkout(){
+	// 	await fetch("api/stripeCheckout"),
+	// 	method: "POST",
+	// 	headers: {
+	// 		"Content-Type": "application/json"
+	// 	}
+	// }
+
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
