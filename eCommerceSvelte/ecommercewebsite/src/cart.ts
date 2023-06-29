@@ -4,7 +4,7 @@ import { writable, get } from "svelte/store";
 
 export const cartItems = writable<CartItem[]>([]);
 
-export const addtoCart = (id:string) => {
+export const addToCart = (id:string) => {
     const items = get(cartItems);
     const itemPosition = items.findIndex((item) => item.id === id);
     if (itemPosition !== -1) {
@@ -22,4 +22,21 @@ export const addtoCart = (id:string) => {
             return [...items, {id: id, quantity: 1}];
         });
     }
+}
+
+export const removeFromCart = (id:string) => {
+    const items = get(cartItems);
+    const itemPosition = items.findIndex((item) => item.id === id);
+    if (items[itemPosition]?.quantity - 1 === 0) {
+        //remove from cart if we have quantity 0
+        items.slice(itemPosition, 1);
+    }
+
+    const updatedItems = items.map((item) => {
+        if (item.id === id) {
+         return [...items, {id: id, quantity: item.quantity - 1}];
+        }
+        return item;
+     });
+     return updatedItems;
 }
